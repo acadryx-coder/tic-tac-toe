@@ -156,7 +156,7 @@ const Game = (function() {
 		else if (winner === player1) {
 			player1.win();
 			updateGameDiv();
-			setTimeout(clearGameBoard, 2000);
+			setTimeout(clearGameBoard, 500);
 		}
 		else if (winner === player2) {
 			player2.win();
