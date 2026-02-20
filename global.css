@@ -1,0 +1,82 @@
+:root {
+	--background-color: rgb(230, 230, 255);
+	--btn-color: rgb(115, 50, 220)
+}
+
+* {
+	/*border: 1px solid red;*/
+	text-align: center;
+}
+
+body {
+	background-color: var(--background-color);
+}
+
+#root {
+	min-height: 80vh;
+}
+
+/*Gen. Elements */
+button {
+	background-color: var(--btn-color);
+	padding: 0.8rem 3rem;
+}
+
+.hide {
+	display: none !important;
+}
+
+/* SPECIFICS */
+#game-play-div {
+	display: grid;
+	grid-template-rows: 5rem 10rem 1fr;
+	justify-items: center;
+	gap: 1rem;
+}
+
+#game-info-display {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	#score-display > * {
+		text-align: center;
+		font-weight: medium;
+		font-size: 1.2rem;
+	}
+	#leading-player-display > p {
+		font-size: 1.3rem;
+		font-weight: bold;
+		color: green;
+	}
+}
+
+#score-display {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	.player-score > * {
+		line-height: 1.5rem;
+		color: blue;
+	}
+}
+
+#game-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 0.4rem;
+	width: 70vw;
+	height: 70vw;
+	background-color: lightgrey;
+	border-radius: 1.2rem;
+	padding: 1rem;
+}
+
+.mark-card {
+	border-radius: 0.8rem;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold !important;
+	font-size: 10vw;
+}
+

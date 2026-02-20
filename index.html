@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="global.css?v=3">
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init()</script>
+    <script src="app.js?v=4" defer></script>
+</head>
+<body>
+    <div id="root">
+    	<h1 id="root-header">Tic Tac Toe</h1>
+
+<!-- Note, each below this level is it's own 
+dynamically displayed page inside the root -->
+    	
+		<div id="home">
+			<p>Welcome to Tic Tac Toe Game. Click below to get started</p>
+			<button id="start-btn">START</button>
+		</div>
+
+    	
+    	<div id="start-game">
+    		<div id="get-player-details">
+    			<form id="player-details">
+    				<fieldset id="player1-form">
+    					<legend>Player 1</legend>
+    					<div class="name">
+    						<label for="player1-name">Name: </label>
+    						<input name="player1Name" id="player1-name" type="text" maxlength="10" required>
+    					</div>
+    					<div class="marker">
+    						<label for="player1-mark">Choose Mark: </label>
+    						<select name="player1Mark" id="player1-mark">
+    							<option>X</option>
+    							<option>O</option>
+    						</select>
+    					</div>
+    				</fieldset>
+    				<fieldset id="player2-form">
+    					<legend>Player 2</legend>
+    					<div class="name">
+    						<label for="player2-name">Name: </label>
+    						<input name="player2Name" id="player2-name" type="text" maxlength="10" required>
+    					</div>
+    					<div class="marker">
+    						<label for="player2-mark">Choose Mark: </label>
+    						<select name="player2Mark" id="player2-mark">
+	    						<option>O</option>
+    							<option>X</option>
+    						</select>
+    					</div>
+    				</fieldset>
+    				<button id="play-btn" type="submit">PLAY!</button>
+    			</form>
+    		</div>
+    	</div>
+
+
+    	
+    	<div id="game-play-div">
+    		<h1>Tic Tac Toe</h1>
+    		<div id="game-info-display">
+    			<div id="leading-player-display">
+    				<p>🏆 PLAYER 1</p>
+    			</div>
+    			<div id="score-display">
+    				<div class="player-score" id="player-1">
+    					<p>Player 1 (X): 0</p>
+    				</div>
+    				<p>|</p>
+    				<div class="player-score" id="player-2">
+    					<p>Player 2 (O): 0<p>
+    				</div>
+    			</div>
+    		</div>
+    		<button class="reset">Reset</button>
+    	</div>	
+    </div>
+</body>
+</html>
