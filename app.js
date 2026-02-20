@@ -124,6 +124,13 @@ const Game = (function() {
 					winner = checkWinner(result);
 					processWin(winner);
 				}
+				else if (checkTie()) {
+					document.querySelector("#leading-player-display > p").textContent = "TIE 🤝"
+					setTimeout(() => {
+						clearGameBoard();
+						updateGameDiv();
+					}, 1000);
+				}
 				else if (result === null) {
 					console.log(`Player with ${lastSelected} just made a move!`);
 				}
@@ -220,6 +227,20 @@ const Game = (function() {
 	  }
 	  
 	  return null;
+	}
+
+	// (Simeon Dev-1) Check if game is a tie (board full with no winner)
+	function checkTie() {
+	  const squares = document.querySelectorAll('.mark-card');
+	  
+	  // Check if every square has content (not empty)
+	  for (let square of squares) {
+	    if (square.textContent === '') {
+	      return false; // Found empty square, game not over
+	    }
+	  }
+	  
+	  return true; // All squares filled, it's a tie!
 	}
 	
 	// (Simeon Dev-1) GLOBAL EVENT LISTENERS...
